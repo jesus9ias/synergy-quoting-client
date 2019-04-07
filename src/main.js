@@ -1,59 +1,28 @@
 import Vue from 'vue';
-import 'quasar/dist/quasar.ie.polyfills';
-import '@quasar/extras/roboto-font/roboto-font.css';
-import '@quasar/extras/material-icons/material-icons.css';
-import '@quasar/extras/fontawesome-v5/fontawesome-v5.css';
-import '@quasar/extras/ionicons-v4/ionicons-v4.css';
-import '@quasar/extras/mdi-v3/mdi-v3.css';
-import '@quasar/extras/eva-icons/eva-icons.css';
-import {
-  Quasar,
-  QLayout,
-  QHeader,
-  QDrawer,
-  QPageContainer,
-  QPage,
-  QToolbar,
-  QToolbarTitle,
-  QBtn,
-  QIcon,
-  QList,
-  QItem,
-  QItemSection,
-  QItemLabel,
-} from 'quasar';
+import VueI18n from 'vue-i18n';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import messages from './i18n';
+import MainLayout from './layouts/MainLayout.vue';
+import GeneralSection from './components/GeneralSection.vue';
+import './QuasarComponents';
 import './registerServiceWorker';
-import './styles/quasar.styl';
-
-Vue.use(Quasar, {
-  config: {},
-  components: {
-    QLayout,
-    QHeader,
-    QDrawer,
-    QPageContainer,
-    QPage,
-    QToolbar,
-    QToolbarTitle,
-    QBtn,
-    QIcon,
-    QList,
-    QItem,
-    QItemSection,
-    QItemLabel,
-  },
-  directives: {
-  },
-  plugins: {
-  },
-});
 
 Vue.config.productionTip = false;
 
+Vue.use(VueI18n);
+Vue.component('MainLayout', MainLayout);
+Vue.component('GeneralSection', GeneralSection);
+
+const i18n = new VueI18n({
+  locale: 'es-mx',
+  fallbackLocale: 'es-mx',
+  messages,
+});
+
 new Vue({
+  i18n,
   router,
   store,
   render: h => h(App),
