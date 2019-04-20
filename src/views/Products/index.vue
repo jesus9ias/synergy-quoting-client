@@ -22,6 +22,12 @@
           <q-td key="id" :props="props">{{ props.row.id }}</q-td>
           <q-td key="username" :props="props">{{ props.row.username }}</q-td>
           <q-td key="email" :props="props">{{ props.row.email }}</q-td>
+          <q-td key="link" :props="props">
+            <a :href="props.row.link" target="_blank">{{ props.row.link }}</a>
+          </q-td>
+          <q-td key="photo" :props="props">
+            <img class="product_image" alt="product image" width="36px" src="../../assets/logos/logo-blue.jpg">
+          </q-td>
           <q-td key="status" :props="props">{{ props.row.status }}</q-td>
           <q-td key="actions" :props="props">
             <div
@@ -76,6 +82,22 @@ export default {
           sortable: true,
         },
         {
+          name: 'link',
+          field: 'link',
+          label: 'Link',
+          align: 'left',
+          required: true,
+          sortable: true,
+        },
+        {
+          name: 'photo',
+          field: 'photo',
+          label: 'Photo',
+          align: 'left',
+          required: true,
+          sortable: true,
+        },
+        {
           name: 'status',
           field: 'status',
           label: 'Estatus',
@@ -97,18 +119,24 @@ export default {
           id: 1,
           username: 'user.1',
           email: 'user.1@sinergiarefrigeracion.com.mx',
+          link: 'http://www.example.org',
+          photo: 'dads',
           status: 'Activo',
         },
         {
           id: 2,
           username: 'user.2',
           email: 'user.2@sinergiarefrigeracion.com.mx',
+          link: 'http://www.example.org',
+          photo: 'dads',
           status: 'Activo',
         },
         {
           id: 3,
           username: 'user.3',
           email: 'user.3@sinergiarefrigeracion.com.mx',
+          link: 'http://www.example.org',
+          photo: 'dads',
           status: 'Inactivo',
         },
       ],
