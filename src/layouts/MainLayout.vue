@@ -56,7 +56,7 @@
                   <q-item-label label>Perfil</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item class="qitemMenu" @click.native="go('/login')">
+              <q-item class="qitemMenu" @click.native="closeSession">
                 <q-item-section>
                   <q-item-label label>Cerrar Sesión</q-item-label>
                 </q-item-section>
@@ -127,6 +127,9 @@
 </template>
 
 <script>
+import keyStorage from 'key-storage';
+import { STORAGE_IS_LOGIN } from '../utils/constants';
+
 export default {
   name: 'layout-main',
   data() {
@@ -137,6 +140,11 @@ export default {
   methods: {
     go(to) {
       this.$router.push(to);
+    },
+    closeSession() {
+      keyStorage.remove(STORAGE_IS_LOGIN);
+      //  window.location.href = '/#/goodBye';
+      window.location.href = '/';
     },
   },
 };

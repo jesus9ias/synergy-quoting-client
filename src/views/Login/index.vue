@@ -34,6 +34,9 @@
 </template>
 
 <script>
+import keyStorage from 'key-storage';
+import { STORAGE_IS_LOGIN } from '../../utils/constants';
+
 export default {
   name: 'page-login',
   data() {
@@ -48,7 +51,8 @@ export default {
   },
   methods: {
     goHome() {
-      this.$router.push('/');
+      keyStorage.set(STORAGE_IS_LOGIN, 1);
+      window.location.reload();
     },
   },
 };

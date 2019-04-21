@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import lazyLoading from './lazyLoading';
+import Auth from './Auth';
 
 Vue.use(Router);
 
@@ -8,27 +9,23 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: lazyLoading('Home'),
-    },
-    {
-      path: '/login',
-      component: lazyLoading('Login'),
+      component: Auth(lazyLoading('Home')),
     },
     {
       path: '/quotations',
-      component: lazyLoading('Quotations'),
+      component: Auth(lazyLoading('Quotations')),
     },
     {
       path: '/quotations/create',
-      component: lazyLoading('Quotations/Create'),
+      component: Auth(lazyLoading('Quotations/Create')),
     },
     {
       path: '/quotations/:id',
-      component: lazyLoading('Quotations/Create'),
+      component: Auth(lazyLoading('Quotations/Create')),
     },
     {
       path: '/quotations/:id/preview',
-      component: lazyLoading('Quotations/Preview'),
+      component: Auth(lazyLoading('Quotations/Preview')),
     },
     {
       path: '/cotiza',
@@ -36,35 +33,35 @@ export default new Router({
     },
     {
       path: '/users',
-      component: lazyLoading('Users'),
+      component: Auth(lazyLoading('Users')),
     },
     {
       path: '/profile',
-      component: lazyLoading('Profile'),
+      component: Auth(lazyLoading('Profile')),
     },
     {
       path: '/products',
-      component: lazyLoading('Products'),
+      component: Auth(lazyLoading('Products')),
     },
     {
       path: '/products/create',
-      component: lazyLoading('Products/Create'),
+      component: Auth(lazyLoading('Products/Create')),
     },
     {
       path: '/products/:id',
-      component: lazyLoading('Products/Edit'),
+      component: Auth(lazyLoading('Products/Edit')),
     },
     {
       path: '/about',
-      component: lazyLoading('About'),
+      component: Auth(lazyLoading('About')),
     },
     {
       path: '/logs',
-      component: lazyLoading('Logs'),
+      component: Auth(lazyLoading('Logs')),
     },
     {
-      path: '/login',
-      component: lazyLoading('Login'),
+      path: '/goodBye',
+      component: lazyLoading('GoodBye'),
     },
   ],
 });
