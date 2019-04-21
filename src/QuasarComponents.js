@@ -34,6 +34,7 @@ import {
   QCardSection,
   QItemSection,
   QToolbarTitle,
+  AppFullscreen,
   QPageContainer,
   QStepperNavigation,
 } from 'quasar';
@@ -73,5 +74,6 @@ Vue.use(Quasar, {
   directives: {},
   plugins: {
     Dialog,
+    AppFullscreen,
   },
 });

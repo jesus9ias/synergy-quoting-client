@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import QuotationForm from '../../components/QuotationForm/index.vue';
+import QuotationForm from '../../../components/QuotationForm/index.vue';
 
 export default {
   name: 'page-quotation',

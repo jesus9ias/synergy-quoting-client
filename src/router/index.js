@@ -19,6 +19,14 @@ export default new Router({
       component: lazyLoading('Quotations/Create'),
     },
     {
+      path: '/quotations/:id',
+      component: lazyLoading('Quotations/Create'),
+    },
+    {
+      path: '/quotations/:id/preview',
+      component: lazyLoading('Quotations/Preview'),
+    },
+    {
       path: '/cotiza',
       component: lazyLoading('PublicQuotation'),
     },

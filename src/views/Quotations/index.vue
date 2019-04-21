@@ -36,6 +36,7 @@
               <q-btn
                 color="secondary"
                 icon="print"
+                @click="$router.push(`/quotations/${props.row.id}/preview`)"
               />
               <q-btn
                 flat
