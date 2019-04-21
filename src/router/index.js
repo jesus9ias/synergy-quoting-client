@@ -35,6 +35,14 @@ export default new Router({
       component: lazyLoading('Products'),
     },
     {
+      path: '/products/create',
+      component: lazyLoading('Products/Create'),
+    },
+    {
+      path: '/products/:id',
+      component: lazyLoading('Products/Edit'),
+    },
+    {
       path: '/about',
       component: lazyLoading('About'),
     },

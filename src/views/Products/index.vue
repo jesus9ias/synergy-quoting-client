@@ -5,7 +5,8 @@
         <q-btn
           color="primary"
           icon="add"
-          label="Nuevo Producto"
+          label="Nuevo producto"
+          @click="$router.push('/products/create')"
         />
       </div>
       <q-table
@@ -26,7 +27,12 @@
             <a :href="props.row.link" target="_blank">{{ props.row.link }}</a>
           </q-td>
           <q-td key="photo" :props="props">
-            <img class="product_image" alt="product image" width="36px" src="../../assets/logos/logo-blue.jpg">
+            <img
+              class="product_image"
+              alt="product image"
+              width="36px"
+              src="../../assets/logos/logo-blue.jpg"
+            />
           </q-td>
           <q-td key="status" :props="props">{{ props.row.status }}</q-td>
           <q-td key="actions" :props="props">
@@ -37,11 +43,13 @@
               <q-btn
                 color="primary"
                 icon="edit"
+                @click="$router.push(`/products/${props.row.id}`)"
               />
               <q-btn
                 flat
                 color="negative"
                 icon="delete"
+                @click="confirmDelete(props.row.id)"
               />
             </div>
           </q-td>
@@ -54,6 +62,33 @@
 <script>
 export default {
   name: 'page-products',
+  methods: {
+    confirmDelete(id) {
+      this.$q.dialog({
+        title: 'Confirm',
+        message: `Are you sure to delete ${id}?`,
+        ok: {
+          push: true,
+        },
+        cancel: {
+          color: 'negative',
+        },
+        persistent: true,
+      })
+        .onOk(() => {
+          console.log('>>>> OK');
+        })
+        .onOk(() => {
+          console.log('>>>> second OK catcher');
+        })
+        .onCancel(() => {
+          console.log('>>>> Cancel');
+        })
+        .onDismiss(() => {
+          console.log('I am triggered on both OK and Cancel');
+        });
+    },
+  },
   data() {
     return {
       columns: [
