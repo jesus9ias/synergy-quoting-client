@@ -59,6 +59,10 @@ export default new Router({
       component: lazyLoading('About'),
     },
     {
+      path: '/logs',
+      component: lazyLoading('Logs'),
+    },
+    {
       path: '/login',
       component: lazyLoading('Login'),
     },
