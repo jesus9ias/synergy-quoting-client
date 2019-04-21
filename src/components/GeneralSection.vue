@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex column q-pa-sm" :class="classes">
+  <q-page class="flex column q-pa-sm" :class="classes" :style="'min-height: auto'">
     <h3 class="section__title self-center">{{ this.title }}</h3>
     <slot />
   </q-page>

@@ -6,6 +6,8 @@
           profile
         </q-card-section>
       </q-card>
+    </general-section>
+    <general-section>
       <q-card class="my-card">
         <q-card-section>
           change password

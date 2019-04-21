@@ -48,17 +48,17 @@
             <q-list>
               <q-item class="qitemMenu" @click.native="go('/quotations/create')">
                 <q-item-section>
-                  <q-item-tile label>Nueva Cotización</q-item-tile>
+                  <q-item-label label>Nueva Cotización</q-item-label>
                 </q-item-section>
               </q-item>
               <q-item class="qitemMenu" @click.native="go('/profile')">
                 <q-item-section>
-                  <q-item-tile label>Perfil</q-item-tile>
+                  <q-item-label label>Perfil</q-item-label>
                 </q-item-section>
               </q-item>
               <q-item class="qitemMenu" @click.native="go('/login')">
                 <q-item-section>
-                  <q-item-tile label>Cerrar Sesión</q-item-tile>
+                  <q-item-label label>Cerrar Sesión</q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -121,7 +121,7 @@
     </q-drawer>
 
     <q-page-container>
-      <slot />
+      <slot></slot>
     </q-page-container>
   </q-layout>
 </template>
