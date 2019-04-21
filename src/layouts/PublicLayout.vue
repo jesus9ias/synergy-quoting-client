@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'layout-login',
+  name: 'layout-public',
 };
 </script>
 

@@ -6,6 +6,7 @@ import store from './store';
 import messages from './i18n';
 import MainLayout from './layouts/MainLayout.vue';
 import LoginLayout from './layouts/LoginLayout.vue';
+import PublicLayout from './layouts/PublicLayout.vue';
 import PreviewLayout from './layouts/PreviewLayout.vue';
 import GeneralSection from './components/GeneralSection.vue';
 import './QuasarComponents';
@@ -17,6 +18,7 @@ Vue.use(VueI18n);
 
 Vue.component('MainLayout', MainLayout);
 Vue.component('LoginLayout', LoginLayout);
+Vue.component('PublicLayout', PublicLayout);
 Vue.component('PreviewLayout', PreviewLayout);
 Vue.component('GeneralSection', GeneralSection);
 

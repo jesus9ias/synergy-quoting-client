@@ -9,21 +9,8 @@
 <script>
 export default {
   name: 'layout-preview',
-  data() {
-    return {};
-  },
-  methods: {
-    go(to) {
-      this.$router.push(to);
-    },
-  },
 };
 </script>
 
 <style lang="stylus">
-  .layoutMenu
-    background-color #222
-    color white
-    .q-item
-      padding 0px 16px
 </style>
