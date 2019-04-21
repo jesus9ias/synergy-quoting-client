@@ -11,6 +11,10 @@ export default new Router({
       component: lazyLoading('Home'),
     },
     {
+      path: '/login',
+      component: lazyLoading('Login'),
+    },
+    {
       path: '/quotations',
       component: lazyLoading('Quotations'),
     },

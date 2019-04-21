@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'layout-preview',
+  name: 'layout-login',
   data() {
     return {};
   },

@@ -128,7 +128,7 @@
 
 <script>
 export default {
-  name: 'MainLayout',
+  name: 'layout-main',
   data() {
     return {
       leftDrawerOpen: this.$q.platform.is.desktop,
